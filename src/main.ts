@@ -9,16 +9,17 @@ import { bootstrapApplication } from '@angular/platform-browser';
   imports: [CommonModule],
   template: `
     <h1>Hello from {{name}}!</h1>
+    <p>{{this.element}}</p>
   `,
 })
 export class App {
   name = 'Angular';
-  constructor(){
-    console.log( "constructor")
+  element = '';
+  constructor() {
+    this.element += '    constructor:::        ';
   }
-  ngOnInit(){
-    console.log( "on init")
-
+  ngOnInit() {
+    this.element += '        on init         ';
   }
 }
 
